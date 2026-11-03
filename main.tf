@@ -13,3 +13,11 @@ resource "aws_subnet" "dev"{
         Name = var.subnet_tag
     }
 }
+resource "aws_s3_bucket" "demo_bucket" {
+  bucket = "shoaib-terraform-pr-demo-2026"
+
+  tags = {
+    Name        = "PR-Demo-Bucket"
+    Environment = "Testing"
+  }
+}
